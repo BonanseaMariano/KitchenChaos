@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a3020b0348c55428cc30781227369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: a965f6810ee072648b7a8f4569662168, type: 2}
   counterTopPoint: {fileID: 5226858866142694508}
+  kitchenObjectSO: {fileID: 11400000, guid: a965f6810ee072648b7a8f4569662168, type: 2}
 --- !u!4 &5226858866142694508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9049702607269403086, guid: 35cdf3ad7db337f4183d3a9b312c9a31,
@@ -125,6 +125,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2039803767787336452}
     m_Modifications:
+    - target: {fileID: 102550813385737453, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 353237590725857035, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2298542010046885598, guid: 9a9137fa2b035d34e881701d2c178192,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -138,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
         type: 3}
@@ -225,6 +235,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
+    - target: {fileID: 7816906318471787887, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143070647044102886, guid: 9a9137fa2b035d34e881701d2c178192,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8609693441769329850, guid: 9a9137fa2b035d34e881701d2c178192,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -232,7 +252,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
     m_RemovedComponents:
     - {fileID: 6289625630049244101, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5261771210811040880, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192,
@@ -258,11 +279,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff81d4a783bac24aa9473e717a4272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearCounter: {fileID: 0}
-  visualGameObject: {fileID: 6562157968109718339}
+  baseCounter: {fileID: 2280269844424710138}
+  visualGameObjectArray:
+  - {fileID: 6562157968109718339}
+  - {fileID: 5074345783614039242}
+  - {fileID: 3714553461814997287}
+  - {fileID: 3892825784764693185}
 --- !u!4 &638312684500343431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 3993088711979548204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3714553461814997287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353237590725857035, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 3993088711979548204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3892825784764693185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102550813385737453, guid: 9a9137fa2b035d34e881701d2c178192,
+    type: 3}
+  m_PrefabInstance: {fileID: 3993088711979548204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5074345783614039242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8143070647044102886, guid: 9a9137fa2b035d34e881701d2c178192,
     type: 3}
   m_PrefabInstance: {fileID: 3993088711979548204}
   m_PrefabAsset: {fileID: 0}
@@ -373,3 +416,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8441e1478c917e4d90ed2fa847eb77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  containerCounter: {fileID: 2280269844424710138}
