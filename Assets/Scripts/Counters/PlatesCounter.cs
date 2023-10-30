@@ -6,6 +6,8 @@ using System;
 public class PlatesCounter : BaseCounter
 {
     public event EventHandler OnPlateSpawned;
+    public event EventHandler OnPlateRemoved;
+
 
     [SerializeField] private KitchenObjectSO plateKitchenObjectSO;
     private float spawnPlateTimer;
@@ -22,8 +24,25 @@ public class PlatesCounter : BaseCounter
             if (platesSpawnedAmmount<platesSpawnedAmmountMax)
             {
                 platesSpawnedAmmount++;
+                OnPlateSpawned?.Invoke(this,EventArgs.Empty);
             }
         }
     }
 
+    public override void Interact(Player player)
+    {
+        if (!player.HasKitchenObject())
+        {
+            //Player is empty handed
+            if (platesSpawnedAmmount>0)
+            {
+                //There´s at least one plate here
+                platesSpawnedAmmount--;
+
+                KitchenObject.SpawnKitchenObject(plateKitchenObjectSO,player);
+
+                OnPlateRemoved?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
 }
